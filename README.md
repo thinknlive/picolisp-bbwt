@@ -1,7 +1,8 @@
 # picolisp-bbwt
 A Simpler Bijective Burrows-Wheeler Transform
 
-All credit for the algorithm implemented here goes to excellent writeup at http://www.glastonbridge.co.uk/amy/amylib/bbwt.html
+All credit for the algorithm implemented here goes to excellent writeup at //www.glastonbridge.co.uk/amy/amylib/bbwt.html
+
 The following is mostly a quote/summary/paraphrase from that page:
 
 > The Burrows Wheeler Transform is a transform that takes a string and it transforms it into a form that is easier to compress by grouping like characters together. The transform itself doesn't do any compressing. 
