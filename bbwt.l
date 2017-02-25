@@ -42,8 +42,7 @@
                      Debug
                      (msg (text "++++ FC: @1 NC: @2 Word: @3" FC NC (pack (reverse Word)))) )
                   (Bwt (reverse Word))
-                  (setq FC NC)
-                  (setq Word NIL) )
+                  (setq FC NC Word NIL) )
                (setq Word (cons NC Word)) )
             (and
                Debug
@@ -58,7 +57,7 @@
                (link (car (cdr X))) ) ) ) ) )
 
 # ---------------------------------------------
-# Take an list created by (encodeBBWT)
+# Take a list created by (encodeBBWT)
 # and reverse it to get back the original list
 
 (de decodeBBWT (L Debug)
@@ -91,8 +90,8 @@
                   '(and Debug (msg (text "---- Get B: @1 V: @2 N: @3 E: @4" B V N E)))
                   (when V
                      (idx 'CNTS V NIL)
-                     (setq C (pop 'E))
-                     (setq V (cons N (list E)))
+                     (setq C (pop 'E)
+                           V (cons N (list E)))
                      (idx 'CNTS V T) )
                   C ) ) )
          (and Debug (msg (text "#### L: @1" L)))
@@ -105,8 +104,8 @@
                   'CNTS
                   (list X (+ 1 (or CNT 0)))
                   T ) )
-            (setq B (idx 'CNTS))
-            (setq CNTS NIL)
+            (setq B (idx 'CNTS)
+                  CNTS NIL)
             (and Debug (msg (text "===== Counts: @1" B)))
             (and Debug (msg "# Fill buckets (build graph)"))
             (for X B
