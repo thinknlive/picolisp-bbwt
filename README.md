@@ -22,6 +22,9 @@ There is a slight added complexity to the decoder in this case. The problem is t
 
 Finally, note that the encoded symbol list is effectively a graph that is 'almost' a Euler Path. To decode, we walk that path. When we enter a node that has no more edges then we 'jump' to the next non-empty node. Remember that each node represents a distinct symbol from the input. Nodes are ordered.
 
+BBWT is particularly effective over lists with uneven distribution of symbols. It is particularly ineffective (although it may help to detect partners) in lists where the distribution is equal. e.g 'random' sequences. You can use it to do a type of 'binary' sort on a sequence by inserting your sort 'pivot' between each value.
+
+
 ~~~~
 
 : Str
