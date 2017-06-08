@@ -22,6 +22,9 @@ There is a slight added complexity to the decoder in this case. The problem is t
 
 Finally, note that the encoded symbol list is effectively a graph that is 'almost' a Euler Path. To decode, we walk that path. When we enter a node that has no more edges then we 'jump' to the next non-empty node. Remember that each node represents a distinct symbol from the input. Nodes are ordered.
 
+BBWT is particularly effective over lists with uneven distribution of symbols. It is particularly ineffective (although it may help to detect partners) in lists where the distribution is equal. e.g 'random' sequences. You can use it to do a type of 'binary' sort on a sequence by inserting your sort 'pivot' between each value.
+
+
 ~~~~
 
 : Str
@@ -45,3 +48,16 @@ Finally, note that the encoded symbol list is effectively a graph that is 'almos
 -> T
 
 ~~~~
+
+
+<hr>
+### License
+<small>
+Copyright (c) Lindsay Lawrence
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+</small>
