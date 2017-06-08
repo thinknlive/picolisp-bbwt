@@ -49,7 +49,7 @@
                (msg (text "#### FC: @1 NC: @2 Word: @3" FC NC (pack (reverse Word)))) )
             (if Word (Bwt (reverse Word))) ) )
       (and Debug (msg "######## BWT: "))
-      (and Debug (msg (pretty (idx 'BWT))))
+      (setq *BBWT (idx 'BWT))
       (fish
          atom
          (make
